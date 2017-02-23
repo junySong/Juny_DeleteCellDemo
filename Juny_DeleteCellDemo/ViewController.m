@@ -38,21 +38,21 @@
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *rid = @"rid";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: rid];
+    DeleteTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: rid];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:rid];
+        cell = [[DeleteTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:rid];
         
-        UIView *view = [[UIView alloc]initWithFrame:CGRectMake(self.view.frame.size.width, 0, 67, 44)];
-        view.backgroundColor = [UIColor purpleColor];
-        [cell.contentView addSubview:  view];
-        
-        
-        UILabel *label = [[UILabel alloc]init];
-        label.frame  = CGRectMake(0, 0, 67, 44);
-        label.textColor = [UIColor blackColor];
-        label.text = @"爱大红";
-        label.font = [UIFont systemFontOfSize:15];
-        [view addSubview:label];
+//        UIView *view = [[UIView alloc]initWithFrame:CGRectMake(self.view.frame.size.width, 0, 67, 44)];
+//        view.backgroundColor = [UIColor purpleColor];
+//        [cell.contentView addSubview:  view];
+//        
+//        
+//        UILabel *label = [[UILabel alloc]init];
+//        label.frame  = CGRectMake(0, 0, 67, 44);
+//        label.textColor = [UIColor blackColor];
+//        label.text = @"爱大红";
+//        label.font = [UIFont systemFontOfSize:15];
+//        [view addSubview:label];
     }
     cell.textLabel.text = [_array objectAtIndex:indexPath.row];
     return cell;
